@@ -1,0 +1,42 @@
+/*
+    CSS to create an overlay effect over an image!
+
+    Sample Code:
+    
+        <div class="contain">
+            <img class="ui huge image" src="img/characters/white-walker-1">
+
+            <div class="overlay">
+                <div class="button">
+                    <button class="ui teal button">
+                        Kanishka Munshi
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+*/
+.contain {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    margin: 0;
+}
+
+.overlay {
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(27.50%, -400%);
+}
+
+.contain:hover .image {
+    opacity: 0.5;
+}
+
+.contain:hover .overlay {
+    opacity: 1;
+}
+
