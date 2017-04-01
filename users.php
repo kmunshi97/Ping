@@ -99,4 +99,5 @@
     </div>
     <!--The parent accordian group ends here!-->
     
+    <script type="text/javascript" src="js/accordian.js"></script>
 </body>

@@ -1,5 +1,0 @@
-ErrorDocument 500 /Ping/error.html
-ErrorDocument 404 /Ping/error.html
-ErrorDocument 403 /Ping/error.html
-ErrorDocument 401 /Ping/error.html
-ErrorDocument 400 /Ping/error.html
