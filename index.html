@@ -1,41 +1,370 @@
-<html>
-    <head>
-        <title>
-            Ping!
-        </title>
-        
-                
-        <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/components/reset.css">
-        
-        <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/components/icon.css">
-        
-        <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://semantic-ui.com/examples/homepage.html# -->
+<html class="gr__semantic-ui_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Standard Meta -->
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Ping!</title>
     
-        <!--<script src="js/semantic.min.js"></script>-->
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/components/reset.min.css">
+  <link rel="stylesheet" type="text/css" href="css/site.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+
+  <style type="text/css">
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .team.stripe.segment {
+      padding: 0em;
+    }
+    .team.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+
+
+  </style>
+
+<script src="js/jquery-3.2.0.min.js"></script>
+
+    <script src="js/visibility.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/transition.js"></script>
+
+    
+    <script>
+        $(document)
+        .ready(function() {
+
+          // fix menu when passed
+          $('.masthead')
+            .visibility({
+              once: false,
+              onBottomPassed: function() {
+                $('.fixed.menu').transition('fade in');
+              },
+              onBottomPassedReverse: function() {
+                $('.fixed.menu').transition('fade out');
+              }
+            })
+          ;
+
+          // create sidebar and attach to menu open
+          $('.ui.sidebar')
+            .sidebar('attach events', '.toc.item')
+          ;
+
+        })
+      ;
+    </script>
+  
+</head>
+
+<body data-gr-c-s-loaded="true" class="pushable">
+
+    <!-- Following Menu -->
+    <div class="ui massive top fixed menu transition hidden">
+        <div class="ui container">
+            <a class="active item">Home</a>
+            <a class="item">Work</a>
+
+            <div class="right menu">
+                <div class="item">
+                    <a class="ui button" href="login.php">
+                      Log in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Contents -->
+    <div class="pusher">
+        <div class="ui inverted vertical masthead center aligned segment">
+
+           <div class="ui container">
+                <div class="ui large secondary inverted pointing menu">
+
+                    <a class="active item">Home</a>
+                    <a class="item">Work</a>
+
+                    <div class="right item">
+                        <a class="ui inverted button" href="login.php">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui text container">
+                <h1 class="ui inverted header">
+                    Ping!
+                </h1>
+
+                <h2>
+                    An Intranet chat and file-sharing Web-App
+                </h2>
+                
+                <!--TODO-->
+                
+                <a class="ui primary large button" href="login2.html">
+                    Faculty Login
+                    <i class="right arrow icon"></i>
+                </a> 
+            </div>
+
+        </div>
+
+        <div class="ui vertical stripe segment">
+            <div class="ui middle aligned stackable grid container">
+                <div class="row">
+
+                    <div class="three wide column"></div>
+                    
+                    <div class="eight wide column">
+                        <h3 class="ui header">We Help People Communicate</h3>
+
+                        <p>
+                            Humans as we know require a means a communication, and hence, language was born.<br>
+                            We make communication easier and more accessible.
+                        </p>
+
+                        <h3 class="ui header">File sharing</h3>
+
+                        <p>
+                            Yes that's correct,<br> 
+                            We use the power of Intranet to share data throughout the network at a very high speed which is not limited by your network bandwidth.
+                        </p>
+                    </div>
+                    
+                    <!--TODO-->
+                    <div class="right floated four wide column">
+                        <img src="img/ping-logo.png" class="ui big image">
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <style>
-            body{
-                background-image: url(img/index);
-                padding: 0 auto;
-                margin: 0 auto;
-                background-size: cover;
-                background-repeat: no-repeat;
-                overflow-y: hidden;
-            }
+        <div class="ui vertical stripe team segment">
+            <div class="ui equal width stackable internally celled grid">
+                <div class="center aligned row">
+
+
+                    <div class="column">
+                        <h3>
+                            <!--TODO-->
+                            <a href="" target="_blank">
+                                <div class="ui circular image" style="width: 10vw; height: 10vw;">
+                                    <img src="" alt="Harshit">
+                                </div>
+                                <br>
+                                Harshit Choubey
+                            </a>
+                        </h3>
+                        
+                        <p>
+                            Developer
+                        </p>
+                    </div>
+
+                    <div class="column">
+                        <h3>
+                            <a href="http://www.github.com/kmunshi97" target="_blank">
+                                <div class="ui circular image" style="width: 10vw; height: 10vw;">
+                                    <img src="img/me.JPG" alt="Kanishka">
+                                </div>
+                                <br>
+                                Kanishka Munshi
+                            </a>
+                        </h3>
+                        <p>
+                            Head Developer and UI-Developer
+                        </p>
+                    </div>
+                    
+                    <div class="column">
+                        <h3>
+                            <!--TODO-->
+                            <a href="" target="_blank">
+                                <div class="ui circular image" style="width: 10vw; height: 10vw;">
+                                    <img src="" alt="Chinmay">
+                                </div>
+                                <br>
+                                Chinmay Saini
+                            </a>
+                        </h3>
+                        <p>
+                            Developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="ui vertical stripe segment">
+            <div class="ui text container">
+                <h3 class="ui header">
+                    Missing out the fun?
+                </h3>
+
+                <p>
+                    What are you waiting for?
+                    Don't you wanna be part of something greater than everything? 
+                    So, just Sign up?
+                    But, beware with great power comes great responsibilities.
+                    Sign up only when you are ready . . .
+                </p>
+
+                <h4 class="ui horizontal header divider">
+                    <a>Sign up</a>
+                </h4>
+
+                <h3 class="ui header">
+                    Can't Signup? Where's the link?
+                </h3>
+
+                <p>
+                    Yes I know, you probably feel disappointed that you are not worthy.
+                    <br> Yup, thats true XD
+                    <br> Well, the sign up is actually disabled to avoid fake. So you'll need the administrator to        create an account for you.
+                </p>
+
+                <a class="ui large button" href="signup2.html">
+                    I'm Still Quite Interested
+                </a>
+            </div>
+        </div>
+        
+        
+  
+
+
+          <div class="ui inverted vertical footer segment">
             
-        </style>     
-    </head>
-    
-    <body>    
-        <button class="ui big teal button"
-                style="float: right;
-                       margin-top: 90vh;
-                       margin-right: 2.5vw;">
-                
-            <a style="color: white;"
-               href="home.html">
-                Know more here...
-            </a>
-        </button>
-    </body>
+            <div class="ui divider"></div>
+            
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    
+                    <!--TODO-->
+                    <div class="six wide column">
+                        <img class="ui tiny image right floated"
+                             alt="Ping!"
+                             src=""
+                             style="margin-right: 2.5vw;">                        
+                    </div>
+                    
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">
+                            About
+                        </h4>   
+             
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">
+                                Sitemap
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="six wide column">
+                        <h4 class="ui inverted header">
+                            Team
+                        </h4>
+                       
+                        <div class="ui inverted link list">
+                            <a class="item">
+                                Kanishka Munshi 2015121
+                            </a>
+                            <a class="item">
+                                Harshit Choubey 2015103
+                            </a>
+                            <a class="item">
+                                Chinmay Saini 2015073
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+    <!--<span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span>-->
 </html>

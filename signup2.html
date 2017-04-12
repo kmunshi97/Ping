@@ -1,0 +1,93 @@
+<head>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/components/reset.css">
+        
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/components/icon.css">
+        
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    
+    <title>Signup!</title>
+    
+    <style>
+        input{
+            font-size: 12pt;
+        }
+        h2 span.spacer {
+            padding:0 8px;
+        }
+        
+        .image { 
+            position: relative; 
+            width: 100%; /* for IE 6 */
+        }
+
+        h2 { 
+           position: absolute; 
+           top: 20vh; 
+           left: 24vw; 
+           width: 100%; 
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img style="margin-top: 7.5vh;
+                    margin-left: 5vw;;
+                    width: 90vw;
+                    height: 90vh;"
+             src="img/bg/mac.png">
+        
+        <h2>
+            <span>
+                Hi,
+                <span class='spacer'></span>
+                <br>
+                I believe I need to Sign-up to use your services.
+                <br>
+                <br>
+                    My Name is:
+                    <span class='spacer'></span>
+
+                    <div class="ui basic red input" >
+                        <input type="text">
+                    </div>
+
+                <br>
+                <br>
+                    And, My Username would be:
+                    <span class='spacer'></span>
+
+                    <div class="ui basic red input" >
+                        <input type="text">
+                    </div>
+
+                <br>
+                <br>
+                    Also, I would like to have my password as:
+                    <span class='spacer'></span>
+
+                    <div class="ui basic red input" >
+                        <input type="password">
+                    </div>
+                
+            </span>
+        </h2>
+        
+    </div>
+    
+    <script type="text/javascript">
+        $(function() {
+            $("h2")
+                .wrapInner("<span>")
+
+            $("h2 br")
+                .before("<span class='spacer'>")
+                .after("<span class='spacer'>");
+        });
+    </script>
+    
+</body>
