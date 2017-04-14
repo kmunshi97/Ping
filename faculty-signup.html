@@ -1,0 +1,329 @@
+<head>
+        
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/components/reset.css">
+        
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/components/icon.css">
+        
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    
+    <title>Signup!</title>
+    
+    <style>
+        body{
+            height: 100vh;
+            overflow-y: hidden;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="ui container" 
+         style="margin: auto;
+                margin-top: 15vh;">
+        <div class="ui centered raised card" style="width: 36vw;">
+            <div class="content">
+                <div class="ui large header">
+                    Sign up!
+                </div>
+                <div class="ui divider"></div>   
+                                
+                <div class="description">
+                    <div class="ui form">
+                        <div class="ui three fields">
+                            <div class="field">
+                                  <label>First Name</label>
+                                  <input type="text" name="first-name" placeholder="First Name">
+                            </div>
+                            
+                            <div class="field">
+                                  <label>Middle Name</label>
+                                  <input type="text" name="middle-name" placeholder="Middle Name">
+                            </div>
+                            
+                            <div class="field">
+                                  <label>Last Name</label>
+                                  <input type="text" name="last-name" placeholder="Last Name">
+                            </div>                            
+                        </div>
+                        <div class="ui divider"></div>
+                        <!--Name ends here!-->
+
+                        <div class="ui two fields">
+                            <div class="field">
+                                <label>Mail</label>
+                                <input type="text" name="user-name" placeholder="Mail">
+                            </div>
+
+                            <div class="field">
+                                <label>Phone Number</label>
+                                <input type="number" name="phone-number" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <!--Mail and Phone Number end here!-->
+                        
+                        
+                        <div class="ui two fields">
+                            <div class="field">                            
+
+                                <label>Username</label>
+                                <div class="ui courses fluid search selection dropdown">
+                                    <input name="tags" type="hidden">
+                                    <i class="dropdown icon"></i>
+                                
+                                    <div class="default text">
+                                        Select
+                                    </div>
+                                        
+                                    <div class="menu">
+                                        <br>
+                                        <!--CSE start here!-->
+                                        <h2 class="ui horizontal header">
+                                            <a>Computer Science Department</a>
+                                        </h2>
+                                        
+                                        <div class="item" data-value="ayan">
+                                            ayan
+                                        </div>
+
+                                        <div class="item" data-value="mkbajpai">
+                                            mkbajpai
+                                        </div>
+
+                                        <div class="item" data-value="pkhanna">
+                                            pkhanna
+                                        </div>
+                                        
+                                        <div class="item" data-value="vkjain">
+                                            vkjain
+                                        </div>
+                                        
+                                        <!--ECE start here!-->
+                                        <h2 class="ui horizontal header">
+                                            <a>Electrical Department</a>
+                                        </h2>
+
+                                        <div class="item" data-value="kpandiyan">
+                                            kpandiyan
+                                        </div>
+
+                                        <div class="item" data-value="prabin16">
+                                            prabin16
+                                        </div>
+
+                                        <div class="item" data-value="pnkondekar">
+                                            pnkondekar
+                                        </div>        
+                                        
+                                        <div class="item" data-value="skjian">
+                                            skjain
+                                        </div>
+
+                                        <div class="item" data-value="varunb">
+                                            varunb
+                                        </div>
+
+                                        <!--ME starts here!-->
+                                        <h2 class="ui horizontal header">
+                                            <a>Mechnical Department</a>
+                                        </h2>
+
+                                        <div class="item" data-value="amarnath">
+                                            amarnath
+                                        </div>
+                                        
+                                        <div class="item" data-value="gd">
+                                            gd
+                                        </div>
+
+                                        <div class="item" data-value="samrat.rao">
+                                            samrat.rao
+                                        </div>
+
+                                        <div class="item" data-value="sujoy">
+                                            sujoy
+                                        </div>
+
+                                        <div class="item" data-value="tanush">
+                                            tanush
+                                        </div>
+                                        
+                                        <div class="item" data-value="vkgupta">
+                                            vkgupta
+                                        </div>
+
+                                        <div class="item" data-value="zahid">
+                                            zahid
+                                        </div> 
+                                        
+                                         <!--ME starts here!-->
+                                        <h2 class="ui horizontal header">
+                                            <a>Design Discipine</a>
+                                        </h2>
+
+                                        <div class="item" data-value="chatterjees">
+                                            chatterjees
+                                        </div>
+
+                                        <div class="item" data-value="prabir">
+                                            prabir
+                                        </div>
+
+                                        <div class="item" data-value="ptandan">
+                                            ptandan
+                                        </div>
+
+                                        <!--Others start here!-->
+                                        <h2 class="ui horizontal header">
+                                            <a>Others</a>
+                                        </h2>
+                                        
+                                        <div class="item" data-value="aojha">
+                                            aojha
+                                        </div>
+
+                                        <div class="item" data-value="bhupen">
+                                            bhupen
+                                        </div>
+
+                                        <div class="item" data-value="mkpanda">
+                                            mkpanda
+                                        </div>
+                                        
+                                        <div class="item" data-value="nihar">
+                                            nihar
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="field">
+                                
+                                <label>Courses Offered</label>
+                                <div class="ui courses fluid multiple search selection dropdown">
+                                    <input name="tags" type="hidden">
+                                    <i class="dropdown icon"></i>
+                                
+                                    <div class="default text">
+                                        Select
+                                    </div>
+                                        
+                                    <div class="menu">
+                                        <h2 class="ui horizontal header">
+                                            <a>Computer Science Department</a>
+                                        </h2>
+                                      
+                                        <div class="item" data-value="CS-201">
+                                            CS-201 Professional Lab - I
+                                        </div>
+                                        
+                                        <div class="item" data-value="CS-202">
+                                            CS-202 Computer System Architecture and Organisation
+                                        </div>
+                                        
+                                        <div class="item" data-value="CS-203">
+                                            CS-203 Database Design & Management
+                                        </div>
+
+                                        <div class="item" data-value="CS-205">
+                                            CS-205 Language Theory
+                                        </div>
+                                        
+                                        <div class="item" data-value="CS-306">
+                                            CS-306 Algorithm Design & Analysis
+                                        </div>
+                                        
+                                        <h2 class="ui horizontal header">
+                                            <a>Electrical Department</a>
+                                        </h2>
+
+                                        <div class="item" data-value="undefined">
+                                            Course Name
+                                        </div>
+                                        
+                                        <h2 class="ui horizontal header">
+                                            <a>Mechanical Department</a>
+                                        </h2>
+                                        
+                                        <div class="item" data-value="undefined">
+                                            Course Name
+                                        </div>
+
+                                        <h2 class="ui horizontal header">
+                                            <a>Design Discipline</a>
+                                        </h2>
+                                        
+                                        <div class="item" data-value="undefined">
+                                            Course Name
+                                        </div>
+
+                                        <h2 class="ui horizontal header">
+                                            <a>Others</a>
+                                        </h2>
+                                        
+                                        <div class="item" data-value="ES-205(a)">
+                                            ES-205(a) Probability
+                                        </div>
+
+                                        <div class="item" data-value="ES-205(b)">
+                                            ES-205(b) Numerical Methods for Engineers
+                                        </div>
+                                        
+                                        <div class="item" data-value="ES-205(e)">
+                                            ES-205(e) Differential Equations
+                                        </div>
+                                        
+                                        <div class="item" data-value="ES-205(f)">
+                                            ES-205(f) Computer Graphics
+                                        </div>
+                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <!--Username and Courses end here!-->                        
+
+                        <div class="ui two fields">
+                            <div class="field">
+                                  <label>Password</label>
+                                  <input type="password" name="password" placeholder="Password">
+                            </div>
+                            
+                            <div class="field">
+                                  <label>Confirm Password</label>
+                                  <input type="password" name="confirm-password" placeholder="Confirm Password">
+                            </div>                            
+                        </div>
+                        <!--Password ends here!-->
+                    </div>
+                    <!-- UI Form ends here! -->
+                </div>
+                <!--Description ends here!-->
+            
+            </div>
+            <!--Content ends here!-->
+            
+            <div class="extra content">
+                <div class="inline field">
+                    <div class="ui slider checkbox">
+                        <input type="checkbox" tabindex="0" class="hidden">
+                            <label>I agree</label>
+                    </div>
+                </div>
+                
+                <div class="ui primary button  right floated">
+                    <a href="chat.php" style="color: white;">Submit</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+        <!--The javascripts!-->
+        <script src="js/jquery-3.2.0.min.js"></script>
+        <script src="js/semantic.min.js"></script>
+        <script src="js/checkbox.js"></script>
+        <script src="js/dropdown.js"></script>
