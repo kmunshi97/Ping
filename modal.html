@@ -1,0 +1,117 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/components/reset.css">
+        
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/components/icon.css">
+        
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    
+    <!--The javascripts!-->
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/addInput.js"></script>
+    <script src="js/semantic.min.js"></script>
+</head>
+
+<body>
+
+    <!--The modal starts here!-->
+    <div class="ui modal" id="forgot-password">
+        <div class="header">
+            Forgot Password?
+        </div>
+            
+        <div class="content">
+            <div class="description" 
+                 style="margin: auto;
+                        margin-top: .5vw;
+                        margin-left: 5vw;
+                        margin-right: 5vw;">
+               
+                <!--TODO-->
+                <div class="ui form">
+                    <form>
+                        <div class="ui fluid input" style="">
+                            <button class="ui basic teal labeled icon button">
+                                <i class="mail icon"></i>
+                                Mail
+                            </button>
+                            
+                            <input type="email">
+                        </div>
+                        <br>
+                        <div class="ui red large submit button labeled icon right floated">
+                             <i class="send icon"></i>   
+                            Send
+                        </div>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!--The modal ends here!-->
+
+    <!--The modal starts here!-->
+    <div class="ui modal" id="change-password">
+        <div class="header">
+            Change Password?
+        </div>
+            
+        <div class="content">
+            <div class="description" 
+                 style="margin: auto;
+                        margin-top: .5vw;
+                        margin-left: 5vw;
+                        margin-right: 5vw;">
+               
+                <!--TODO-->
+                <div class="ui form">
+                    <form>
+                            <div class="field">
+                                  <label>Current Password</label>
+                                  <input type="password" name="password" placeholder="Password">
+                            </div>
+                            
+                        <div class="ui two fields">
+                            <div class="field">
+                                  <label>New Password</label>
+                                  <input type="password" name="confirm-password" placeholder="Confirm Password">
+                            </div>                            
+
+                            
+                            <div class="field">
+                                  <label>Confirm Password</label>
+                                  <input type="password" name="confirm-password" placeholder="Confirm Password">
+                            </div>                            
+                        </div>
+                        <!--Password ends here!-->
+                        <br>
+                        <div class="ui red large submit button labeled icon right floated">
+                             <i class="send icon"></i>   
+                            Send
+                        </div>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!--The modal ends here!-->
+
+
+    <button class="ui massive red circular mail icon button" onclick="forgotPasswordModal()">
+        <i class="add icon"></i>
+    </button>
+    
+    <button class="ui massive red circular mail icon button" onclick="changePasswordModal()">
+        <i class="lock icon"></i>
+    </button>
+    
+    <div class="ui yellow large icon button" onclick="addInput()">
+        <i class="cart icon"></i>
+        Add Item
+    </div>
+    
+    <div class="ui divider"></div>
+    <div id="addInputDiv"></div>
+</body>
