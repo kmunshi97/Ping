@@ -56,7 +56,7 @@
                 </button>
                 
                 <!--All the chat goes in here!-->
-                <ul>
+                <ul id="chatbox">
                     
                     <!--The time stamp goes here-->
                     <div class="ui divider"></div>
@@ -65,7 +65,7 @@
                     </li>
                     <div class="ui divider"></div>
                     
-                    <li class="sender">
+                    <!--<li class="sender">
                         <div class="sender">
                             <span class="ui left pointing big blue label">
                                 Hi Sansa!
@@ -90,7 +90,6 @@
                             </span>
                         </div>
                     </li>
-                    
                     
                     <li class="receiver">
                         <div class="receiver">
@@ -155,7 +154,7 @@
                     </li>
 
                     
-                    <!--The time stamp goes here-->
+                    <!--The time stamp goes here--><!--
                     <div class="ui divider"></div>
                     <li class="center aligned meta">
                         Today, 10:10 PM
@@ -189,7 +188,7 @@
                         </div>
                     </li>
 
-                    
+-->                    
                 </ul>
             
             </div>
@@ -201,19 +200,21 @@
                 <div class="two fields">
                     
                     <div class="field" style="width: 92.5vw;">
-                        <textarea rows="2" id="message-textarea"
-                                  placeholder="Enter Message here...">
-                        </textarea>
+                        <textarea rows="2" 
+                                  id="message-textarea"
+                                  placeholder="Enter Message here..."></textarea>
                     </div>
                     
                     <div class="two fields">
                         <div class="field">
-                            <button class="circular ui icon button">
+                            <button onclick="fetchChat()"
+                                    class="circular ui icon button">
                                 <i class="attach icon"></i>
                             </button>
                         </div>
                         <div class="field">
                             <button id="send-button"
+                                    onclick="sendChat()"
                                     class="ui primary button right floated">
                                 Send
                             </button>
@@ -225,32 +226,7 @@
 
     </div>
     
-<!--
-<script id="message-template" type="text/x-handlebars-template">
-  <li>
-    <div class="message-data align-right">
-      <span class="message-data-time" >{{time}}, Today</span> &nbsp; &nbsp;
-      <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
-    </div>
-    <div class="message other-message float-right">
-      {{messageOutput}}
-    </div>
-  </li>
-</script>
-
-<script id="message-response-template" type="text/x-handlebars-template">
-  <li>
-    <div class="message-data">
-      <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-      <span class="message-data-time">{{time}}, Today</span>
-    </div>
-    <div class="message my-message">
-      {{response}}
-    </div>
-  </li>
-</script>
--->
-    
+    <script type="text/javascript" src="js/chatbox.js"></script>        
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/semantic.min.js"></script>
     <script type="text/javascript" src="js/chat.js"></script>
