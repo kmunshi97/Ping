@@ -25,7 +25,6 @@
             }
             .username{
                 font-size: 18pt;
-                font-family: cursive;
             }
         </style>
         

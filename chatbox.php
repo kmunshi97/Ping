@@ -14,7 +14,7 @@
                     </a>
                     <img 
                      class="ui custom right floated circular image"
-                     src="img/characters/joeffrey">
+                     src="img/characters/joeffrey.jpg">
 
                 </div>
 
@@ -28,14 +28,14 @@
     </div>
             
     <!--The chat starts here!-->
-    <div id="chat-history" class="chat ui fluid card"
+    <div  class="chat ui fluid card"
          style="height: 29.25vw;">        
 <!--
         <a class="ui left pointing red label">Red Pointing</a>
 -->
-        <div class="content"
+        <div id="chat-history" class="content"
              style="height: inherit;
-                    overflow-y: scroll;
+                    overflow-y: auto;
                     overflow-x: hidden;">
             
             <div class="header"></div>
@@ -45,7 +45,7 @@
                 
                 <button id="goto"
                         class="circular ui icon red button"
-                        onclick="gotoEnd()"
+                        onclick="scrollToBottom('chat-history')"
                         style=" float: right;
                                 margin-top: 20vw;
                                 margin-left: 36vw;
@@ -200,7 +200,8 @@
                 <div class="two fields">
                     
                     <div class="field" style="width: 92.5vw;">
-                        <textarea rows="2" 
+                        <textarea rows="2"
+                                  type="text"
                                   id="message-textarea"
                                   placeholder="Enter Message here..."></textarea>
                     </div>
@@ -225,10 +226,8 @@
         </div>
 
     </div>
+</body>
     
-    <script type="text/javascript" src="js/chatbox.js"></script>        
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/semantic.min.js"></script>
-    <script type="text/javascript" src="js/chat.js"></script>
-    
-</body>
+    <script type="text/javascript" src="js/chatbox.js"></script>            

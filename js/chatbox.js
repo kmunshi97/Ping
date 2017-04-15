@@ -23,7 +23,9 @@ function sendChat() {
     
     span.className = "ui right pointing big teal label";
     span.appendChild(txt);
-    chatOutputDiv.appendChild(span);    
+    chatOutputDiv.appendChild(span); 
+    
+    scrollToBottom("chat-history");
 }
 
 // Create a new list item to fetch chat.
@@ -65,6 +67,23 @@ function fetchChat() {
     
     span.className = "ui left pointing big blue label";
     span.appendChild(txt);
-    chatOutputDiv.appendChild(span);    
-
+    chatOutputDiv.appendChild(span); 
+    
+    scrollToBottom("chat-history");
 }
+
+function scrollToBottom (id) {
+ var div = document.getElementById(id);
+   $('#' + id).animate({
+      scrollTop: div.scrollHeight - div.clientHeight
+   }, 360);
+}
+
+$(function() {
+    $("#message-textarea").keypress(function (e) {
+        if(e.which == 13) {
+            sendChat();
+            e.preventDefault();
+        }
+    });
+});

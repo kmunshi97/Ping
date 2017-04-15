@@ -38,7 +38,7 @@
                         Ameya Datar
                     </a>
                     
-                    <img src="img/characters/khaleesi"
+                    <img src="img/characters/khaleesi.jpg"
                          class="ui friendlist tiny circular image right floated">
 
                 </div>
@@ -62,7 +62,7 @@
 
                     <img 
                      class="ui friendlist right floated tiny circular image"
-                     src="img/characters/cyclops">
+                     src="img/characters/cyclops.png">
                 
                 </div>
                     
@@ -108,7 +108,7 @@
 
                     <img 
                      class="ui friendlist right floated tiny circular image"
-                     src="img/characters/wonder-woman">
+                     src="img/characters/wonder-woman.jpg">
                 
                 </div>
                     
@@ -126,12 +126,12 @@
                 
                 <div class="header">
                     <a class="ui small header">
-                        Donshangwar Abhishek
+                        Dongshanwar Abhishek
                     </a>
 
                     <img 
                      class="ui friendlist right floated tiny circular image"
-                     src="img/characters/arya-stark">
+                     src="img/characters/arya-stark.jpg">
                 
                 </div>
                     

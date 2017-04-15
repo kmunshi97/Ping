@@ -9,7 +9,7 @@
         <!--A single list-item starts here!-->
         <div class="item">
             <img class="ui small circular image"
-                 src="img/characters/super-man">            
+                 src="img/characters/super-man.png">            
             
             <div class="content">
                 <a class="ui large header">
@@ -42,7 +42,7 @@
         <!--A single list-item starts here!-->
         <div class="item">
             <img class="ui small circular image"
-                 src="img/characters/hulk">
+                 src="img/characters/hulk.png">
             
             <div class="content">
                 <a class="ui large header">
@@ -75,7 +75,7 @@
         <!--A single list-item starts here!-->
         <div class="item">
             <img class="ui small circular image"
-                 src="img/characters/nick-fury">
+                 src="img/characters/nick-fury.jpg">
             
             <div class="content">
                 <a class="ui large header">

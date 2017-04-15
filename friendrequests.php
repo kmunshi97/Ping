@@ -22,7 +22,7 @@
                 <div class="header">
                     <img 
                          class="ui tiny circular right floated image"
-                         src="img/characters/hellboy">
+                         src="img/characters/hellboy.jpg">
                     Chinmay Swaroop Saini
                 </div>
                 
@@ -56,7 +56,7 @@
 
                 <div class="header">
                     
-                    <img class="ui tiny circular right floated image" src="img/characters/green-lantern">
+                    <img class="ui tiny circular right floated image" src="img/characters/green-lantern.png">
                     Harshit Choubey
                 </div>
 
@@ -87,7 +87,7 @@
             <div class="content">
                 <div class="header">
                     <img class="ui tiny circular right floated image"
-                         src="img/characters/robin">
+                         src="img/characters/robin.png">
                     Kanishka Munshi
                 </div>
                 

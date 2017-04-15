@@ -2,8 +2,8 @@
     
     <!--The parent card gorup starts here!-->
     <div class="ui cards"
-         style="height: 12vw;
-                overflow-y: scroll;">
+         style="overflow-y: scroll;
+                height: 12vw;">
  
         
         <!--A single event card starts here!-->
@@ -30,7 +30,7 @@
 
                     <div class="extra content">
                         <div class="author">
-                            <img class="ui avatar image" src="img/characters/hellboy"> 
+                            <img class="ui avatar image" src="img/characters/hellboy.jpg"> 
                     
                             Prof. VK Jain
 
@@ -66,7 +66,7 @@
 
                     <div class="extra content">
                         <div class="author">
-                            <img class="ui avatar image" src="img/characters/hellboy"> 
+                            <img class="ui avatar image" src="img/characters/hellboy.jpg"> 
                     
                             Prof. VK Jain
 
@@ -102,7 +102,7 @@
 
                     <div class="extra content">
                         <div class="author">
-                            <img class="ui avatar image" src="img/characters/hellboy"> 
+                            <img class="ui avatar image" src="img/characters/hellboy.jpg"> 
                     
                             Prof. VK Jain
 

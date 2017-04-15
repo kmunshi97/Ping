@@ -3,23 +3,23 @@
 
     $bg = array(
     
-        'img/bg/antman', 
-        'img/bg/batman-1', 
-        'img/bg/flash', 
-        'img/bg/green-lantern', 
-        'img/bg/robin', 
-        'img/bg/winterfell'
+        'img/bg/antman.jpg', 
+        'img/bg/batman-1.png', 
+        'img/bg/flash.jpg', 
+        'img/bg/green-lantern.jpg', 
+        'img/bg/robin.jpg', 
+        'img/bg/winterfell.jpg'
     
     );
 
     $divAvatar = array(
             
-        'img/characters/antman',
-        'img/characters/bat-man',
-        'img/characters/flash', 
-        'img/characters/green-lantern',
-        'img/characters/robin',
-        'img/characters/jonsnow'
+        'img/characters/antman.jpg',
+        'img/characters/bat-man.jpg',
+        'img/characters/flash.png', 
+        'img/characters/green-lantern.png',
+        'img/characters/robin.png',
+        'img/characters/jonsnow.jpg'
     
     );
 
@@ -55,7 +55,7 @@
             <img 
                  src="<?php echo $selectedDivAvatar; ?>">
 
-            <form>
+            <form method="post" action="">
 
                 <div class="ui big icon input focus" 
                      style="margin-bottom:.5vw;">
@@ -72,10 +72,10 @@
                 
                 <div class="ui divider"></div>
                 
-                <button class="ui huge green button" type="submit" style="margin-bottom: .5vw;">Login</button>
+                <button type="submit" class="ui huge green button" type="submit" style="margin-bottom: .5vw;">Login</button>
             
                 <!--TODO Create a forgot password link-->
-                <a href=""><p>Forgot Password?</p></a>
+                <a href="#"><p>Forgot Password?</p></a>
             </form>
         </div>
     </body>

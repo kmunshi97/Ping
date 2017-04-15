@@ -56,7 +56,7 @@
                                 Kanishka Munshi
                                 
                                 <span class="right floated">
-                                    <img class="ui avatar circular image" src="img/characters/hellboy">
+                                    <img class="ui avatar circular image" src="img/characters/hellboy.jpg">
                                 </span>
                         
                            </label>
@@ -67,7 +67,7 @@
                             
                             <div class="visible content">
                             
-                                <img class="ui large image" src="img/characters/white-walker-1">
+                                <img class="ui large image" src="img/characters/white-walker-1.jpg">
                             
                             </div>
                             
@@ -81,9 +81,12 @@
                                 
                                 <!--TODO: Quick chat stuff-->
                                 <div class="ui action fluid input" 
-                                     style="margin-bottom: 0;
-                                            padding: 0;">
-                                        <input type="text" placeholder="Enter message here..." >
+                                     style="position: absolute;
+                                        left:0;
+                                        right:0;
+                                        bottom: 1.5vh;">
+                                        
+                                    <input type="text" placeholder="Enter message here...">
                                         <button class="ui red right floated icon button ">
                                             <i class="send icon"></i>
                                         </button>
