@@ -16,7 +16,6 @@ function sendChat() {
         document.getElementById("chatbox").appendChild(li);
     }
   
-    document.getElementById("message-textarea").value = "";
 
     var span = document.createElement("SPAN");
     var txt = document.createTextNode(inputMessage);
@@ -26,6 +25,10 @@ function sendChat() {
     chatOutputDiv.appendChild(span); 
     
     scrollToBottom("chat-history");
+
+/*
+    document.getElementById("message-textarea").value = "";
+*/
 }
 
 // Create a new list item to fetch chat.
@@ -79,11 +82,13 @@ function scrollToBottom (id) {
    }, 360);
 }
 
+
 $(function() {
     $("#message-textarea").keypress(function (e) {
         if(e.which == 13) {
             sendChat();
-            e.preventDefault();
+            //e.preventDefault();
         }
     });
 });
+

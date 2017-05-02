@@ -60,7 +60,7 @@
                 <br>       
                 <div class="description">
                     <!--The form starts here!-->
-                    <div class="ui huge form">
+                    <form class="ui huge form" action="facultylogincheck.php" method="post">
                         <!--TODO-->
                         <form method="post">
                             <div class="field" style="margin: 1.5vw;">
@@ -69,7 +69,7 @@
                                         <i class="user icon"></i>
                                         Username
                                     </button>
-                                    <input type="number">
+                                    <input type="text" name="username">
                                 </div>
                             </div>
 
@@ -79,22 +79,19 @@
                                         <i class="lock icon"></i>
                                         Password
                                     </button>
-                                    <input type="password">
+                                    <input type="password" name="password">
                                 </div>
                             </div>
 
                             <div class="ui grid">
-                                <div class=" six wide column"></div>
-                                 <div class=" six wide column">
-                                    <div class="ui big primary button">
-                                        Login
-                                    </div>
+                                <div class="six wide column"></div>
+                                 <div class="six wide column">
+                                    <input type="submit" class="ui big primary button" value="Login"></input>
                                 </div>
                             </div>
 
                         </form>
                      </div>
-                </div>
 
                 <br>
                 <div class="extra content">

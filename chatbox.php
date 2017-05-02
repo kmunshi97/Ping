@@ -2,26 +2,82 @@
     <link rel="stylesheet" type="text/css" href="css/chat.css">      
 </head>
 
-<body>        
+<?php
+    if (isset($_GET['previousChat'])) {
+        $friendRollNum = ($_GET['inputFriendRollNum']); 
+        //echo $friendRollNum;
+        session_start();
+        $_SESSION["friendRoll"] = $friendRollNum;
     
+    }
+    //echo $rollUser;
+?>
+
+<body>
+<!--
+    <form id="previousChatForm" method="get" action="chat.php">
+        <input id="inputFriendRollNum" name="inputFriendRollNum" hidden></input>
+        
+        <input class="ui button right floated" type="submit" id="previousChat" name="previousChat" value="Previous Chat"></input>
+
+    </form> 
+-->
     <div class="top">
         <!--A single card starts here!-->
         <div class="ui fluid card">
             <div class="content">
                 <div class="header">
-                    <a class="ui small header">
-                        Joffrey Baratheon
+                    <a class="ui small header" id="friendName">
+                        <?php
+                            if(isset($_GET["inputFriendRollNum"])){
+                                $friendRollNo = $_GET["inputFriendRollNum"];
+            
+                            		//dabase connection code 
+                                    $servername = "localhost";
+                                    $server_username = "root";
+                                    $server_password = "";
+                                    $dbname = "ping";
+
+                                // Create connection
+                                $conn = new mysqli($servername, $server_username, $server_password, $dbname);
+
+                                // Check connection
+                                if ($conn->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                }
+
+                                $query = "SELECT fname, lname, branch FROM users WHERE rollnum=$friendRollNo";
+                                
+                                $result = mysqli_query($conn, $query);
+                                $row = mysqli_fetch_array($result);
+                                $fn=$row[0];
+                                $ln=$row[1]; 
+                                $branch=$row[2]; 
+                                
+                                $friendName = $fn . "&ensp;" . $ln;
+                                $friendBranch = $branch;
+                                echo $friendName;
+                                
+                            }else{
+                                $friendName = "A man has no name!";
+                                $friendBranch = "";
+                                $friendRollNo = "";
+                            }
+                        ?>
+                        
                     </a>
                     <img 
                      class="ui custom right floated circular image"
-                     src="img/characters/joeffrey.jpg">
-
+                     src="img/characters/joeffrey.jpg">                    
                 </div>
 
-                <div class="meta">
-                    CSE &ensp; 2015XXX
+                <div class="meta" id="friendDetails">
+                    <?php 
+                        echo $friendBranch;
+                        echo "  ";
+                        echo $friendRollNo;
+                    ?>
                 </div>
-
             </div>     
         </div><!--A single card ends here!-->
         <div class="ui divider"></div>
@@ -42,7 +98,6 @@
             
             <div class="description">
             
-                
                 <button id="goto"
                         class="circular ui icon red button"
                         onclick="scrollToBottom('chat-history')"
@@ -196,12 +251,15 @@
         </div>
         
         <div class="extra content">
-            <div class="ui form">
+            <form class="ui form" id="myForm" action="sendmsg.php" method="POST">
+        
+                <input id="inputFriendRollNum" name="inputFriendRollNum" hidden></input>
+
                 <div class="two fields">
-                    
                     <div class="field" style="width: 92.5vw;">
                         <textarea rows="2"
                                   type="text"
+                                  name="msgText" 
                                   id="message-textarea"
                                   placeholder="Enter Message here..."></textarea>
                     </div>
@@ -213,15 +271,18 @@
                                 <i class="attach icon"></i>
                             </button>
                         </div>
-                        <div class="field">
-                            <button id="send-button"
-                                    onclick="sendChat()"
-                                    class="ui primary button right floated">
-                                Send
-                            </button>
+            
+                    <div class="field">
+                            <input id="send-button"
+                                   type="submit"
+                                   onclick="sendChat()"
+                                   class="ui primary button right floated"
+                                   value="Send">
+                            </input>
                         </div>
                     </div>
-                </div>
+                </form>
+            <span id="result"></span>
             </div>
         </div>
 
@@ -230,4 +291,12 @@
     
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/semantic.min.js"></script>
-    <script type="text/javascript" src="js/chatbox.js"></script>            
+    <script type="text/javascript" src="js/chatbox.js"></script>
+    <script type="text/javascript" src="js/chat_send.js"></script>
+    <script type="text/javascript" src="js/friendlist.js"></script>
+    <!--<script>
+        $(document).ready(function() {
+            document.getElementById("previousChat").submit();
+        }
+    </script>
+    -->

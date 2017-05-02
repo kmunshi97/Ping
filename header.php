@@ -79,7 +79,7 @@
                         
                         <div class="right menu"> 
                         
-                            <a class="item">
+                            <a class="item" href="profile.html">
                                 <i class="user icon"></i>
                                 Profile
                             </a>

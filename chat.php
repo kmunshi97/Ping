@@ -1,12 +1,23 @@
 <?php 
     // The php file with the header template!
-    include 'header.php';
+    include 'header.php' ;
+    session_start();/*
+    if(isset($_SESSION["userRoll"])
+       $r = $_SESSION["userRoll"];
+    else  */
+       $r = '2015103'//echo $r;
 ?>
 <html>
     <head>
         <title>
             Ping!
         </title>
+        <style>
+            body{
+                height: 100vh;
+                overflow-y: hidden;
+            }
+        </style>
     </head>
     
     <body>
@@ -23,7 +34,9 @@
             
                 <!--Left rail starts here!-->
                 <div class="ui left very close mini rail"
-                     style="width: 22.5vw;">
+                     style="width: 22.5vw;
+                            height: 84vh;
+                            overflow-y: auto;">
                 
                     <div class="ui segment">
                         <div class="ui fixed header">

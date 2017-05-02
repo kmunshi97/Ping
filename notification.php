@@ -1,117 +1,77 @@
-<body>
+<?php
+    $servername = "localhost";
+    $server_username = "root";
+    $server_password = "";
+    $dbname = "ping";
+    // Create connection
+    $conn = new mysqli($servername, $server_username, $server_password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+
+
+    $query="SELECT username, course, type, date, month, venue FROM notifications";
+
+	$result=mysqli_query($conn, $query);
+
+    $i = 0;
+    $countAll = $result->num_rows;
+
+    if ($countAll > 0) {
+        while($row = $result->fetch_assoc()) {
+            $prof[$i] = $row["username"];
+            $course[$i] = $row["course"];	
+            $type[$i] = $row["type"];	
+            $venue[$i] = $row["venue"];
+            $date[$i] = $row["date"];	
+            $month[$i] = $row["month"];	
+            $year = '2017';
+            $i++;
+        }
+    }
+    else {
+        echo "0 results";
+    }
     
+$conn->close();
+    
+?>
+
+<body>    
     <!--The parent card gorup starts here!-->
-    <div class="ui cards"
-         style="overflow-y: scroll;
-                height: 12vw;">
+    <div id="notification-list"
+         class="ui cards"
+         style="overflow-y: auto;
+                min-height: 12vw;">
  
-        
-        <!--A single event card starts here!-->
-         <div class="ui fluid card">
-
-                <div class="content">
-                        <div class="header">
-                            Quiz!
-
-                            <span class="right floated time meta">
-                                Expires: Today
-                            </span>
-                        </div>
-
-                        <div class="description">
-                            <div class="ui divider"></div>
-                            <p style="align: center;">
-                            <br> Date: DD.MM.YYYY
-                            <br> Venue: 
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="extra content">
-                        <div class="author">
-                            <img class="ui avatar image" src="img/characters/hellboy.jpg"> 
-                    
-                            Prof. VK Jain
-
-                            <span class="right floated subject meta">
-                                CS-202    
-                            </span>
-                        </div>
-                    </div>
-        </div> <!--A single events ard ends here!-->
-
-        
-        <!--A single event card starts here!-->
-         <div class="ui fluid card">
-
-                <div class="content">
-                        <div class="header">
-                            Project!
-
-                            <span class="right floated time meta">
-                                Expires: Today
-                            </span>
-                        </div>
-
-                        <div class="description">
-                            <div class="ui divider"></div>
-                            <p style="align: center;">
-                            <br> Date: DD.MM.YYYY
-                            <br> Venue: 
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="extra content">
-                        <div class="author">
-                            <img class="ui avatar image" src="img/characters/hellboy.jpg"> 
-                    
-                            Prof. VK Jain
-
-                            <span class="right floated subject meta">
-                                CS-202    
-                            </span>
-                        </div>
-                    </div>
-        </div> <!--A single events ard ends here!-->
-
-        
-        <!--A single event card starts here!-->
-         <div class="ui fluid card">
-
-                <div class="content">
-                        <div class="header">
-                            Assignment!
-
-                            <span class="right floated time meta">
-                                Expires: Today
-                            </span>
-                        </div>
-
-                        <div class="description">
-                            <div class="ui divider"></div>
-                            <p style="align: center;">
-                            <br> Date: DD.MM.YYYY
-                            <br> Venue: 
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="extra content">
-                        <div class="author">
-                            <img class="ui avatar image" src="img/characters/hellboy.jpg"> 
-                    
-                            Prof. VK Jain
-
-                            <span class="right floated subject meta">
-                                CS-202    
-                            </span>
-                        </div>
-                    </div>
-        </div> <!--A single events ard ends here!-->
-
     </div>
 </body>
+<script type="text/javascript" src="js/notifications.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        
+        var date = [];
+        var month = [];
+        var venue = [];
+        var type = [];
+        var prof = [];
+        var course = [];
+        
+        <?php for ($i = 0; $i < $countAll; $i++) {?>
+            date.push("<?php echo $date[$i]; ?>");
+            month.push("<?php echo $month[$i]; ?>");
+            prof.push("<?php echo $prof[$i]; ?>");
+            venue.push("<?php echo $venue[$i]; ?>");
+            course.push("<?php echo $course[$i]; ?>");
+            type.push("<?php echo $type[$i]; ?>");
+        <?php }?>
+
+        for(var i = 0; i < prof.length; i++){
+            console.log(<?php echo $countAll; ?>);
+            getNotifications(type[i], date[i], month[i], venue[i], prof[i], course[i]);
+        }
+    });
+</script>

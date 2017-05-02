@@ -55,13 +55,13 @@
             <img 
                  src="<?php echo $selectedDivAvatar; ?>">
 
-            <form method="post" action="">
+            <form method="post" action="logincheck.php">
 
                 <div class="ui big icon input focus" 
                      style="margin-bottom:.5vw;">
                     <i class="user icon"></i>
                     
-                    <input type="text" name="username" placeholder="Username">
+                    <input type="text" name="rollnum" placeholder="Username">
                 </div>
                             
                 <div class="ui big icon input focus">

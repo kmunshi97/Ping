@@ -1,109 +1,67 @@
+<?php
+    $servername = "localhost";
+    $root = "root"; 
+    $pass = "";
+    $dbname = "ping";
+
+    // Create connection
+    $conn = mysqli_connect($servername, $root, $pass, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $sql = "SELECT fname, lname, rollnum, branch, email FROM users ORDER BY `rollnum` ASC";
+    $result = mysqli_query($conn, $sql);
+
+    $i = 0;
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            $username[$i] = $row["fname"]. " " . $row["lname"];
+            $branch[$i] = $row["branch"];
+            $rollnum[$i] = $row["rollnum"];
+            $mail[$i] = $row["email"];
+            $i++;
+        }
+    } else {
+        echo "0 results";
+    }
+
+    
+    mysqli_close($conn);
+?>
+
 <body>
     <div class="ui divider"></div>
     
     <!--The list starts here!-->
     <div class="ui top aligned divided list" 
+         id = "users-list"
          style="height: 20vw;
                 overflow-y: scroll;">
-                
-        <!--A single list-item starts here!-->
-        <div class="item">
-            <img class="ui small circular image"
-                 src="img/characters/super-man.png">            
             
-            <div class="content">
-                <a class="ui large header">
-                    Chinmay Swaroop Saini
-                </a>
-
-                <span class="ui meta">
-                    CSE &ensp; 2015073
-                </span>
-
-            </div>
-
-            <div class="right floated extra content">
-                <a class="ui big teal icon label">
-                    <i class="mail icon"></i>
-                    chinmaysaini@iiitdmj.ac.in
-                </a>
-                <div class="ui divider"></div>
-                
-                <div class="ui right floated fluid primary button" 
-                     style="margin-bottom: 0;">
-                    <i class="large add user icon"></i>
-                    Add Friend!
-                </div>
-            </div>
-        </div><!--A single list-item ends here!-->
-
-        <br>
-        
-        <!--A single list-item starts here!-->
-        <div class="item">
-            <img class="ui small circular image"
-                 src="img/characters/hulk.png">
-            
-            <div class="content">
-                <a class="ui large header">
-                    Harshit Choubey
-                </a>
-
-                <span class="ui meta">
-                    CSE &ensp; 2015103
-                </span>
-
-            </div>
-
-            <div class="right floated extra content">
-                <a class="ui big teal icon label">
-                    <i class="mail icon"></i>
-                    harshitchoubey@iiitdmj.ac.in
-                </a>
-                <div class="ui divider"></div>
-                
-                <div class="ui right floated fluid primary button" 
-                     style="margin-bottom: 0;">
-                    <i class="large add user icon"></i>
-                    Add Friend!
-                </div>
-            </div>
-        </div><!--A single list-item ends here!-->
-        
-        <br>
-        
-        <!--A single list-item starts here!-->
-        <div class="item">
-            <img class="ui small circular image"
-                 src="img/characters/nick-fury.jpg">
-            
-            <div class="content">
-                <a class="ui large header">
-                    Kanishka Munshi
-                </a>
-
-                <span class="ui meta">
-                    CSE &ensp; 2015121
-                </span>
-
-            </div>
-
-            <div class="right floated extra content">
-                <a class="ui big teal icon label">
-                    <i class="mail icon"></i>
-                    kanishkamunshi@iiitdmj.ac.in
-                </a>
-                <div class="ui divider"></div>
-                
-                <div class="ui right floated fluid primary button" 
-                     style="margin-bottom: 0;">
-                    <i class="large add user icon"></i>
-                    Add Friend!
-                </div>
-            </div>
-        </div><!--A single list-item ends here!-->
-        
-        <br>
-
     </div><!--The list ends here-->
 </body>
+
+<script type="text/javascript" src="js/usercard.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {        
+        var username = [];
+        var rollnum = [];
+        var branch = [];
+        var mail = [];
+        
+        <?php for ($i = 0; $i < count($username); $i++) {?>
+            username.push("<?php echo $username[$i]; ?>");
+            rollnum.push("<?php echo $rollnum[$i]; ?>");
+            branch.push("<?php echo $branch[$i]; ?>");
+            mail.push("<?php echo $mail[$i]; ?>");
+        <?php }?>
+
+        for(var i = 0; i < username.length; i++){
+            getUsers(username[i], rollnum[i], branch[i], mail[i]);
+        }
+    });
+</script>
+
